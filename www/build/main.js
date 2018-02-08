@@ -84,7 +84,7 @@ var ViewNotePage = (function () {
     };
     ViewNotePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-view-note',template:/*ion-inline-start:"/home/user/ionic notes app/MyNotes/src/pages/view-note/view-note.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>view-note</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title>\n        {{ note.title }}\n      </ion-card-title>\n      <div class="note-date">{{ note.date }}</div>\n      <hr />\n      <div>{{ note.content }}</div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n<ion-footer>\n  <button ion-button color="danger" block (click)="deleteNote(note.createDate)"></button>\n  Delete Note\n</ion-footer>'/*ion-inline-end:"/home/user/ionic notes app/MyNotes/src/pages/view-note/view-note.html"*/,
+            selector: 'page-view-note',template:/*ion-inline-start:"/home/user/ionic notes app/MyNotes/src/pages/view-note/view-note.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>view-note</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title>\n        {{ note.title }}\n      </ion-card-title>\n      <div class="note-date">{{ note.date }}</div>\n      <hr />\n      <div>{{ note.content }}</div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n<ion-footer>\n  <button ion-button color="danger" block (click)="deleteNote(note.createDate)">\n    Delete Note\n  </button>\n</ion-footer>'/*ion-inline-end:"/home/user/ionic notes app/MyNotes/src/pages/view-note/view-note.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -190,7 +190,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/user/ionic notes app/MyNotes/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      MyNotes\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <button ion-itrm *ngFor="let note of notes | async" (click)="getNote(note.createDate)">\n      {{ note.title }}\n    </button>\n  </ion-list>\n  <button ion-button (click)="addNote()">Add Note</button>\n</ion-content>\n'/*ion-inline-end:"/home/user/ionic notes app/MyNotes/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/user/ionic notes app/MyNotes/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      MyNotes\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <button ion-itrm *ngFor="let note of notes | async" (click)="getNote(note.createDate)">\n      <span class="date">{{ note.date }}</span>\n      {{ note.title }}\n    </button>\n  </ion-list>\n  <button ion-button (click)="addNote()">Add Note</button>\n</ion-content>\n'/*ion-inline-end:"/home/user/ionic notes app/MyNotes/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_note_service_note_service__["a" /* NoteService */]])
     ], HomePage);
